@@ -1,4 +1,5 @@
 from scipy.spatial.distance import euclidean
+from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import pandas as pd
 
@@ -58,3 +59,41 @@ def feature_variance(recommendations: pd.DataFrame, feature_cols: list) -> float
         Mean variance of the selected features.
     """
     return recommendations[feature_cols].var().mean()
+
+def compare_recommendation_systems(clustering_recs: pd.DataFrame, graph_recs: pd.DataFrame):
+    """
+    Compare the similarity between recommendations from two systems: 
+    1. Clustering model
+    2. Graph model
+    
+    
+    Parameters:
+    -------------
+    clustering_recs: pd.DataFrame
+        DataFrame containing 15 song recommendations from generate_playlist 
+    graph_recs: pd.DataFrame
+        DataFrame containing 15 song recommendations from the music knowledge graph (NEED OUTPUT FROM GRAPH STILL)
+    
+    Returns:
+    -------------
+    dict
+        Dictionary containing similarity scores between the recommendation systems
+    """
+    # Ensure both recommendation sets have min 15 songs
+    clustering_recs = clustering_recs.iloc[:15]
+    graph_recs = graph_recs.iloc[:15]
+    
+    feature_cols = ['danceability', 'energy', 'valence', 'tempo']
+    
+    # Convert to numpy arrays
+    clustering_features = clustering_recs[feature_cols].to_numpy()
+    graph_features = graph_recs[feature_cols].to_numpy()
+    
+    # Compute similarity between the two recommendation lists
+    similarity_score = cosine_similarity(clustering_features, graph_features).mean()
+    
+    return {
+        'clustering_vs_graph': similarity_score,
+    }
+
+
