@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"font": {"color": "white"}, "group": "blues", "id": "jazz", "label": "jazz", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "blues", "label": "blues", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "r-n-b", "label": "r-n-b", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "r-n-b", "id": "funk", "label": "funk", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "r-n-b", "id": "groove", "label": "groove", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "psych-rock", "label": "psych-rock", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "afrobeat", "label": "afrobeat", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "blues", "id": "gospel", "label": "gospel", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "r-n-b", "id": "soul", "label": "soul", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "country", "id": "honky-tonk", "label": "honky-tonk", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "country", "label": "country", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "country", "id": "bluegrass", "label": "bluegrass", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "country", "id": "folk", "label": "folk", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "rock-n-roll", "label": "rock-n-roll", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "rockabilly", "label": "rockabilly", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "r-n-b", "id": "disco", "label": "disco", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "reggae", "id": "ska", "label": "ska", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "pop", "id": "synth-pop", "label": "synth-pop", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "house", "id": "chicago-house", "label": "chicago-house", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "dance", "label": "dance", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "rock", "label": "rock", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "j-rock", "label": "j-rock", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "hard-rock", "label": "hard-rock", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "punk-rock", "label": "punk-rock", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "punk", "label": "punk", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "alt-rock", "label": "alt-rock", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "alternative", "label": "alternative", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "grunge", "label": "grunge", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "emo", "label": "emo", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "indie", "label": "indie", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "indie-pop", "label": "indie-pop", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "hardcore", "label": "hardcore", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "metal", "label": "metal", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "black-metal", "label": "black-metal", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "death-metal", "label": "death-metal", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "heavy-metal", "label": "heavy-metal", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "metalcore", "label": "metalcore", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "grindcore", "label": "grindcore", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "rock", "id": "goth", "label": "goth", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "pop", "label": "pop", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "pop", "id": "power-pop", "label": "power-pop", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "industrial", "label": "industrial", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "pop", "id": "j-pop", "label": "j-pop", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "pop", "id": "j-idol", "label": "j-idol", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "pop", "id": "k-pop", "label": "k-pop", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "pop", "id": "mandopop", "label": "mandopop", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "pop", "id": "cantopop", "label": "cantopop", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "pop", "id": "mpb", "label": "mpb", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "pop", "id": "pop-film", "label": "pop-film", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "anime", "label": "anime", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "j-dance", "label": "j-dance", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "world-music", "id": "brazil", "label": "brazil", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "children", "id": "show-tunes", "label": "show-tunes", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "reggae", "id": "dancehall", "label": "dancehall", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "reggae", "label": "reggae", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "reggae", "id": "latin", "label": "latin", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "reggae", "id": "latino", "label": "latino", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "reggae", "id": "dub", "label": "dub", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "world-music", "id": "salsa", "label": "salsa", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "breakbeat", "id": "drum-and-bass", "label": "drum-and-bass", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "breakbeat", "label": "breakbeat", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "techno", "label": "techno", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "breakbeat", "id": "trip-hop", "label": "trip-hop", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "hip-hop", "label": "hip-hop", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "dubstep", "label": "dubstep", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "idm", "label": "idm", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "house", "id": "deep-house", "label": "deep-house", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "house", "label": "house", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "house", "id": "progressive-house", "label": "progressive-house", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "hardstyle", "label": "hardstyle", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "trance", "label": "trance", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "electro", "label": "electro", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "detroit-techno", "label": "detroit-techno", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ambient", "label": "ambient", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "edm", "label": "edm", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "minimal-techno", "label": "minimal-techno", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "electronic", "label": "electronic", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "club", "label": "club", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "edm", "id": "party", "label": "party", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "ambient", "id": "chill", "label": "chill", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "ambient", "id": "study", "label": "study", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "classical", "id": "piano", "label": "piano", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "classical", "label": "classical", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "classical", "id": "opera", "label": "opera", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "classical", "id": "romance", "label": "romance", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "brazil", "id": "pagode", "label": "pagode", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "world-music", "id": "samba", "label": "samba", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "brazil", "id": "sertanejo", "label": "sertanejo", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "brazil", "id": "forro", "label": "forro", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "world-music", "label": "world-music", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "world-music", "id": "tango", "label": "tango", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "children", "id": "kids", "label": "kids", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "children", "label": "children", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": "children", "id": "disney", "label": "disney", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"from": "jazz", "label": "subgenre", "to": "blues", "width": 1}, {"from": "jazz", "label": "influence", "to": "r-n-b", "width": 1}, {"from": "jazz", "label": "influence", "to": "funk", "width": 1}, {"from": "jazz", "label": "influence", "to": "groove", "width": 1}, {"from": "jazz", "label": "influence", "to": "psych-rock", "width": 1}, {"from": "jazz", "label": "influence", "to": "afrobeat", "width": 1}, {"from": "blues", "label": "subgenre", "to": "gospel", "width": 1}, {"from": "blues", "label": "influence", "to": "r-n-b", "width": 1}, {"from": "gospel", "label": "derivative", "to": "r-n-b", "width": 1}, {"from": "gospel", "label": "derivative", "to": "soul", "width": 1}, {"from": "honky-tonk", "label": "subgenre", "to": "country", "width": 1}, {"from": "country", "label": "subgenre", "to": "bluegrass", "width": 1}, {"from": "country", "label": "subgenre", "to": "folk", "width": 1}, {"from": "country", "label": "influence", "to": "rock-n-roll", "width": 1}, {"from": "country", "label": "influence", "to": "rockabilly", "width": 1}, {"from": "bluegrass", "label": "subgenre", "to": "folk", "width": 1}, {"from": "groove", "label": "subgenre", "to": "r-n-b", "width": 1}, {"from": "groove", "label": "influence", "to": "funk", "width": 1}, {"from": "groove", "label": "influence", "to": "soul", "width": 1}, {"from": "r-n-b", "label": "influence", "to": "soul", "width": 1}, {"from": "r-n-b", "label": "subgenre", "to": "funk", "width": 1}, {"from": "r-n-b", "label": "subgenre", "to": "disco", "width": 1}, {"from": "r-n-b", "label": "influence", "to": "ska", "width": 1}, {"from": "soul", "label": "influence", "to": "funk", "width": 1}, {"from": "soul", "label": "influence", "to": "disco", "width": 1}, {"from": "soul", "label": "influence", "to": "ska", "width": 1}, {"from": "soul", "label": "influence", "to": "afrobeat", "width": 1}, {"from": "funk", "label": "influence", "to": "disco", "width": 1}, {"from": "funk", "label": "influence", "to": "psych-rock", "width": 1}, {"from": "funk", "label": "influence", "to": "afrobeat", "width": 1}, {"from": "disco", "label": "influence", "to": "synth-pop", "width": 1}, {"from": "disco", "label": "influence", "to": "chicago-house", "width": 1}, {"from": "disco", "label": "influence", "to": "dance", "width": 1}, {"from": "rock-n-roll", "label": "subgenre", "to": "rock", "width": 1}, {"from": "rock-n-roll", "label": "subgenre", "to": "rockabilly", "width": 1}, {"from": "rock", "label": "subgenre", "to": "rockabilly", "width": 1}, {"from": "rock", "label": "subgenre", "to": "j-rock", "width": 1}, {"from": "rock", "label": "subgenre", "to": "hard-rock", "width": 1}, {"from": "rock", "label": "subgenre", "to": "psych-rock", "width": 1}, {"from": "rock", "label": "subgenre", "to": "punk-rock", "width": 1}, {"from": "rock", "label": "subgenre", "to": "punk", "width": 1}, {"from": "rock", "label": "subgenre", "to": "alt-rock", "width": 1}, {"from": "rock", "label": "subgenre", "to": "alternative", "width": 1}, {"from": "rock", "label": "subgenre", "to": "grunge", "width": 1}, {"from": "rock", "label": "subgenre", "to": "emo", "width": 1}, {"from": "rock", "label": "subgenre", "to": "indie", "width": 1}, {"from": "rock", "label": "subgenre", "to": "indie-pop", "width": 1}, {"from": "rock", "label": "subgenre", "to": "hardcore", "width": 1}, {"from": "rock", "label": "subgenre", "to": "metal", "width": 1}, {"from": "rock", "label": "subgenre", "to": "black-metal", "width": 1}, {"from": "rock", "label": "subgenre", "to": "death-metal", "width": 1}, {"from": "rock", "label": "subgenre", "to": "heavy-metal", "width": 1}, {"from": "rock", "label": "subgenre", "to": "metalcore", "width": 1}, {"from": "rock", "label": "subgenre", "to": "grindcore", "width": 1}, {"from": "rock", "label": "subgenre", "to": "goth", "width": 1}, {"from": "psych-rock", "label": "influence", "to": "metal", "width": 1}, {"from": "psych-rock", "label": "influence", "to": "goth", "width": 1}, {"from": "punk-rock", "label": "subgenre", "to": "punk", "width": 1}, {"from": "punk-rock", "label": "influence", "to": "grunge", "width": 1}, {"from": "punk-rock", "label": "influence", "to": "metal", "width": 1}, {"from": "punk-rock", "label": "influence", "to": "hardcore", "width": 1}, {"from": "punk-rock", "label": "influence", "to": "goth", "width": 1}, {"from": "punk", "label": "influence", "to": "heavy-metal", "width": 1}, {"from": "punk", "label": "influence", "to": "metalcore", "width": 1}, {"from": "punk", "label": "influence", "to": "emo", "width": 1}, {"from": "punk", "label": "influence", "to": "hardcore", "width": 1}, {"from": "alt-rock", "label": "influence", "to": "indie-pop", "width": 1}, {"from": "alt-rock", "label": "influence", "to": "indie", "width": 1}, {"from": "alt-rock", "label": "influence", "to": "grunge", "width": 1}, {"from": "alt-rock", "label": "influence", "to": "alternative", "width": 1}, {"from": "alternative", "label": "influence", "to": "indie-pop", "width": 1}, {"from": "alternative", "label": "influence", "to": "indie", "width": 1}, {"from": "alternative", "label": "influence", "to": "grunge", "width": 1}, {"from": "grunge", "label": "influence", "to": "metal", "width": 1}, {"from": "emo", "label": "influence", "to": "hardcore", "width": 1}, {"from": "emo", "label": "influence", "to": "indie", "width": 1}, {"from": "emo", "label": "influence", "to": "indie-pop", "width": 1}, {"from": "indie", "label": "influence", "to": "indie-pop", "width": 1}, {"from": "indie-pop", "label": "influence", "to": "pop", "width": 1}, {"from": "indie-pop", "label": "influence", "to": "power-pop", "width": 1}, {"from": "hardcore", "label": "influence", "to": "heavy-metal", "width": 1}, {"from": "hardcore", "label": "influence", "to": "metalcore", "width": 1}, {"from": "black-metal", "label": "influence", "to": "heavy-metal", "width": 1}, {"from": "death-metal", "label": "influence", "to": "metalcore", "width": 1}, {"from": "death-metal", "label": "influence", "to": "heavy-metal", "width": 1}, {"from": "heavy-metal", "label": "influence", "to": "grindcore", "width": 1}, {"from": "goth", "label": "influence", "to": "industrial", "width": 1}, {"from": "power-pop", "label": "subgenre", "to": "pop", "width": 1}, {"from": "pop", "label": "influence", "to": "synth-pop", "width": 1}, {"from": "pop", "label": "subgenre", "to": "j-pop", "width": 1}, {"from": "pop", "label": "subgenre", "to": "j-idol", "width": 1}, {"from": "pop", "label": "subgenre", "to": "k-pop", "width": 1}, {"from": "pop", "label": "subgenre", "to": "mandopop", "width": 1}, {"from": "pop", "label": "subgenre", "to": "cantopop", "width": 1}, {"from": "pop", "label": "subgenre", "to": "mpb", "width": 1}, {"from": "pop", "label": "subgenre", "to": "pop-film", "width": 1}, {"from": "synth-pop", "label": "influence", "to": "dance", "width": 1}, {"from": "j-pop", "label": "influence", "to": "anime", "width": 1}, {"from": "j-pop", "label": "influence", "to": "k-pop", "width": 1}, {"from": "j-pop", "label": "influence", "to": "j-dance", "width": 1}, {"from": "j-idol", "label": "influence", "to": "anime", "width": 1}, {"from": "mandopop", "label": "influence", "to": "cantopop", "width": 1}, {"from": "mpb", "label": "influence", "to": "brazil", "width": 1}, {"from": "pop-film", "label": "connect", "to": "show-tunes", "width": 1}, {"from": "dancehall", "label": "subgenre", "to": "reggae", "width": 1}, {"from": "dancehall", "label": "influence", "to": "ska", "width": 1}, {"from": "dancehall", "label": "influence", "to": "latin", "width": 1}, {"from": "dancehall", "label": "influence", "to": "latino", "width": 1}, {"from": "dancehall", "label": "influence", "to": "dance", "width": 1}, {"from": "reggae", "label": "influence", "to": "dub", "width": 1}, {"from": "reggae", "label": "influence", "to": "ska", "width": 1}, {"from": "reggae", "label": "subgenre", "to": "latin", "width": 1}, {"from": "reggae", "label": "subgenre", "to": "latino", "width": 1}, {"from": "latin", "label": "influence", "to": "salsa", "width": 1}, {"from": "drum-and-bass", "label": "subgenre", "to": "breakbeat", "width": 1}, {"from": "drum-and-bass", "label": "influence", "to": "techno", "width": 1}, {"from": "breakbeat", "label": "influence", "to": "trip-hop", "width": 1}, {"from": "breakbeat", "label": "influence", "to": "hip-hop", "width": 1}, {"from": "breakbeat", "label": "influence", "to": "dubstep", "width": 1}, {"from": "breakbeat", "label": "influence", "to": "idm", "width": 1}, {"from": "trip-hop", "label": "influence", "to": "hip-hop", "width": 1}, {"from": "deep-house", "label": "subgenre", "to": "house", "width": 1}, {"from": "deep-house", "label": "influence", "to": "chicago-house", "width": 1}, {"from": "house", "label": "subgenre", "to": "chicago-house", "width": 1}, {"from": "house", "label": "subgenre", "to": "progressive-house", "width": 1}, {"from": "house", "label": "influence", "to": "hardstyle", "width": 1}, {"from": "house", "label": "influence", "to": "trance", "width": 1}, {"from": "house", "label": "influence", "to": "j-dance", "width": 1}, {"from": "house", "label": "influence", "to": "electro", "width": 1}, {"from": "chicago-house", "label": "influence", "to": "detroit-techno", "width": 1}, {"from": "chicago-house", "label": "influence", "to": "ambient", "width": 1}, {"from": "detroit-techno", "label": "influence", "to": "techno", "width": 1}, {"from": "detroit-techno", "label": "subgenre", "to": "edm", "width": 1}, {"from": "detroit-techno", "label": "influence", "to": "trance", "width": 1}, {"from": "detroit-techno", "label": "influence", "to": "idm", "width": 1}, {"from": "detroit-techno", "label": "influence", "to": "minimal-techno", "width": 1}, {"from": "detroit-techno", "label": "influence", "to": "electro", "width": 1}, {"from": "techno", "label": "influence", "to": "minimal-techno", "width": 1}, {"from": "techno", "label": "subgenre", "to": "edm", "width": 1}, {"from": "techno", "label": "influence", "to": "idm", "width": 1}, {"from": "techno", "label": "influence", "to": "hardstyle", "width": 1}, {"from": "techno", "label": "influence", "to": "j-dance", "width": 1}, {"from": "techno", "label": "influence", "to": "electro", "width": 1}, {"from": "techno", "label": "influence", "to": "industrial", "width": 1}, {"from": "minimal-techno", "label": "subgenre", "to": "edm", "width": 1}, {"from": "edm", "label": "influence", "to": "electro", "width": 1}, {"from": "edm", "label": "subgenre", "to": "electronic", "width": 1}, {"from": "edm", "label": "influence", "to": "dubstep", "width": 1}, {"from": "edm", "label": "subgenre", "to": "idm", "width": 1}, {"from": "edm", "label": "subgenre", "to": "club", "width": 1}, {"from": "edm", "label": "subgenre", "to": "hardstyle", "width": 1}, {"from": "edm", "label": "subgenre", "to": "trance", "width": 1}, {"from": "edm", "label": "subgenre", "to": "j-dance", "width": 1}, {"from": "edm", "label": "subgenre", "to": "party", "width": 1}, {"from": "edm", "label": "influence", "to": "dance", "width": 1}, {"from": "club", "label": "influence", "to": "party", "width": 1}, {"from": "hardstyle", "label": "influence", "to": "trance", "width": 1}, {"from": "trance", "label": "influence", "to": "ambient", "width": 1}, {"from": "trance", "label": "influence", "to": "j-dance", "width": 1}, {"from": "j-dance", "label": "influence", "to": "dance", "width": 1}, {"from": "chill", "label": "subgenre", "to": "ambient", "width": 1}, {"from": "chill", "label": "connect", "to": "study", "width": 1}, {"from": "ambient", "label": "subgenre", "to": "study", "width": 1}, {"from": "piano", "label": "subgenre", "to": "classical", "width": 1}, {"from": "classical", "label": "subgenre", "to": "opera", "width": 1}, {"from": "classical", "label": "subgenre", "to": "romance", "width": 1}, {"from": "pagode", "label": "influence", "to": "brazil", "width": 1}, {"from": "pagode", "label": "influence", "to": "samba", "width": 1}, {"from": "brazil", "label": "subgenre", "to": "sertanejo", "width": 1}, {"from": "brazil", "label": "subgenre", "to": "forro", "width": 1}, {"from": "brazil", "label": "subgenre", "to": "world-music", "width": 1}, {"from": "forro", "label": "influence", "to": "samba", "width": 1}, {"from": "forro", "label": "influence", "to": "tango", "width": 1}, {"from": "forro", "label": "influence", "to": "salsa", "width": 1}, {"from": "tango", "label": "subgenre", "to": "world-music", "width": 1}, {"from": "tango", "label": "influence", "to": "samba", "width": 1}, {"from": "tango", "label": "influence", "to": "salsa", "width": 1}, {"from": "world-music", "label": "subgenre", "to": "samba", "width": 1}, {"from": "world-music", "label": "subgenre", "to": "salsa", "width": 1}, {"from": "samba", "label": "influence", "to": "salsa", "width": 1}, {"from": "kids", "label": "subgenre", "to": "children", "width": 1}, {"from": "children", "label": "subgenre", "to": "disney", "width": 1}, {"from": "children", "label": "subgenre", "to": "show-tunes", "width": 1}, {"from": "disney", "label": "connect", "to": "show-tunes", "width": 1}, {"from": "dance", "label": "influence", "to": "hip-hop", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
