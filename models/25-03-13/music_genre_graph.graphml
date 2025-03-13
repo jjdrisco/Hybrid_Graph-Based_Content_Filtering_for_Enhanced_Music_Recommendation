@@ -1,0 +1,808 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d1" for="edge" attr.name="label" attr.type="string" />
+  <key id="d0" for="node" attr.name="group" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="jazz">
+      <data key="d0">blues</data>
+    </node>
+    <node id="blues" />
+    <node id="gospel">
+      <data key="d0">blues</data>
+    </node>
+    <node id="honky-tonk">
+      <data key="d0">country</data>
+    </node>
+    <node id="country" />
+    <node id="bluegrass">
+      <data key="d0">country</data>
+    </node>
+    <node id="folk">
+      <data key="d0">country</data>
+    </node>
+    <node id="groove">
+      <data key="d0">r-n-b</data>
+    </node>
+    <node id="r-n-b" />
+    <node id="soul">
+      <data key="d0">r-n-b</data>
+    </node>
+    <node id="funk">
+      <data key="d0">r-n-b</data>
+    </node>
+    <node id="disco">
+      <data key="d0">r-n-b</data>
+    </node>
+    <node id="rock-n-roll">
+      <data key="d0">rock</data>
+    </node>
+    <node id="rock" />
+    <node id="rockabilly">
+      <data key="d0">rock</data>
+    </node>
+    <node id="j-rock">
+      <data key="d0">rock</data>
+    </node>
+    <node id="hard-rock">
+      <data key="d0">rock</data>
+    </node>
+    <node id="psych-rock">
+      <data key="d0">rock</data>
+    </node>
+    <node id="punk-rock">
+      <data key="d0">rock</data>
+    </node>
+    <node id="punk">
+      <data key="d0">rock</data>
+    </node>
+    <node id="alt-rock">
+      <data key="d0">rock</data>
+    </node>
+    <node id="alternative">
+      <data key="d0">rock</data>
+    </node>
+    <node id="grunge">
+      <data key="d0">rock</data>
+    </node>
+    <node id="emo">
+      <data key="d0">rock</data>
+    </node>
+    <node id="indie">
+      <data key="d0">rock</data>
+    </node>
+    <node id="indie-pop">
+      <data key="d0">rock</data>
+    </node>
+    <node id="hardcore">
+      <data key="d0">rock</data>
+    </node>
+    <node id="metal">
+      <data key="d0">rock</data>
+    </node>
+    <node id="black-metal">
+      <data key="d0">rock</data>
+    </node>
+    <node id="death-metal">
+      <data key="d0">rock</data>
+    </node>
+    <node id="heavy-metal">
+      <data key="d0">rock</data>
+    </node>
+    <node id="metalcore">
+      <data key="d0">rock</data>
+    </node>
+    <node id="grindcore">
+      <data key="d0">rock</data>
+    </node>
+    <node id="goth">
+      <data key="d0">rock</data>
+    </node>
+    <node id="power-pop">
+      <data key="d0">pop</data>
+    </node>
+    <node id="pop" />
+    <node id="synth-pop">
+      <data key="d0">pop</data>
+    </node>
+    <node id="j-pop">
+      <data key="d0">pop</data>
+    </node>
+    <node id="j-idol">
+      <data key="d0">pop</data>
+    </node>
+    <node id="k-pop">
+      <data key="d0">pop</data>
+    </node>
+    <node id="mandopop">
+      <data key="d0">pop</data>
+    </node>
+    <node id="cantopop">
+      <data key="d0">pop</data>
+    </node>
+    <node id="mpb">
+      <data key="d0">pop</data>
+    </node>
+    <node id="pop-film">
+      <data key="d0">pop</data>
+    </node>
+    <node id="dancehall">
+      <data key="d0">reggae</data>
+    </node>
+    <node id="reggae" />
+    <node id="dub">
+      <data key="d0">reggae</data>
+    </node>
+    <node id="ska">
+      <data key="d0">reggae</data>
+    </node>
+    <node id="latin">
+      <data key="d0">reggae</data>
+    </node>
+    <node id="latino">
+      <data key="d0">reggae</data>
+    </node>
+    <node id="drum-and-bass">
+      <data key="d0">breakbeat</data>
+    </node>
+    <node id="breakbeat" />
+    <node id="trip-hop">
+      <data key="d0">breakbeat</data>
+    </node>
+    <node id="deep-house">
+      <data key="d0">house</data>
+    </node>
+    <node id="house" />
+    <node id="chicago-house">
+      <data key="d0">house</data>
+    </node>
+    <node id="progressive-house">
+      <data key="d0">house</data>
+    </node>
+    <node id="detroit-techno">
+      <data key="d0">edm</data>
+    </node>
+    <node id="techno">
+      <data key="d0">edm</data>
+    </node>
+    <node id="minimal-techno">
+      <data key="d0">edm</data>
+    </node>
+    <node id="edm" />
+    <node id="electro">
+      <data key="d0">edm</data>
+    </node>
+    <node id="electronic">
+      <data key="d0">edm</data>
+    </node>
+    <node id="dubstep">
+      <data key="d0">edm</data>
+    </node>
+    <node id="idm">
+      <data key="d0">edm</data>
+    </node>
+    <node id="club">
+      <data key="d0">edm</data>
+    </node>
+    <node id="hardstyle">
+      <data key="d0">edm</data>
+    </node>
+    <node id="trance">
+      <data key="d0">edm</data>
+    </node>
+    <node id="j-dance">
+      <data key="d0">edm</data>
+    </node>
+    <node id="party">
+      <data key="d0">edm</data>
+    </node>
+    <node id="chill">
+      <data key="d0">ambient</data>
+    </node>
+    <node id="ambient" />
+    <node id="study">
+      <data key="d0">ambient</data>
+    </node>
+    <node id="piano">
+      <data key="d0">classical</data>
+    </node>
+    <node id="classical" />
+    <node id="opera">
+      <data key="d0">classical</data>
+    </node>
+    <node id="romance">
+      <data key="d0">classical</data>
+    </node>
+    <node id="pagode">
+      <data key="d0">brazil</data>
+    </node>
+    <node id="brazil">
+      <data key="d0">world-music</data>
+    </node>
+    <node id="sertanejo">
+      <data key="d0">brazil</data>
+    </node>
+    <node id="forro">
+      <data key="d0">brazil</data>
+    </node>
+    <node id="tango">
+      <data key="d0">world-music</data>
+    </node>
+    <node id="world-music" />
+    <node id="samba">
+      <data key="d0">world-music</data>
+    </node>
+    <node id="salsa">
+      <data key="d0">world-music</data>
+    </node>
+    <node id="kids">
+      <data key="d0">children</data>
+    </node>
+    <node id="children" />
+    <node id="disney">
+      <data key="d0">children</data>
+    </node>
+    <node id="show-tunes">
+      <data key="d0">children</data>
+    </node>
+    <node id="industrial" />
+    <node id="dance" />
+    <node id="hip-hop" />
+    <node id="anime" />
+    <node id="afrobeat" />
+    <edge source="jazz" target="blues">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="jazz" target="r-n-b">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="jazz" target="funk">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="jazz" target="groove">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="jazz" target="psych-rock">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="jazz" target="afrobeat">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="blues" target="gospel">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="blues" target="r-n-b">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="gospel" target="r-n-b">
+      <data key="d1">derivative</data>
+    </edge>
+    <edge source="gospel" target="soul">
+      <data key="d1">derivative</data>
+    </edge>
+    <edge source="honky-tonk" target="country">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="country" target="bluegrass">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="country" target="folk">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="country" target="rock-n-roll">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="country" target="rockabilly">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="bluegrass" target="folk">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="groove" target="r-n-b">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="groove" target="funk">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="groove" target="soul">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="r-n-b" target="soul">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="r-n-b" target="funk">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="r-n-b" target="disco">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="r-n-b" target="ska">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="soul" target="funk">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="soul" target="disco">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="soul" target="ska">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="soul" target="afrobeat">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="funk" target="disco">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="funk" target="psych-rock">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="funk" target="afrobeat">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="disco" target="synth-pop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="disco" target="chicago-house">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="disco" target="dance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="rock-n-roll" target="rock">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock-n-roll" target="rockabilly">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="rockabilly">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="j-rock">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="hard-rock">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="psych-rock">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="punk-rock">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="punk">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="alt-rock">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="alternative">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="grunge">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="emo">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="indie">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="indie-pop">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="hardcore">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="metal">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="black-metal">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="death-metal">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="heavy-metal">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="metalcore">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="grindcore">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="rock" target="goth">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="psych-rock" target="metal">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="psych-rock" target="goth">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="punk-rock" target="punk">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="punk-rock" target="grunge">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="punk-rock" target="metal">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="punk-rock" target="hardcore">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="punk-rock" target="goth">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="punk" target="heavy-metal">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="punk" target="metalcore">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="punk" target="emo">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="punk" target="hardcore">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="alt-rock" target="indie-pop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="alt-rock" target="indie">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="alt-rock" target="grunge">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="alt-rock" target="alternative">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="alternative" target="indie-pop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="alternative" target="indie">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="alternative" target="grunge">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="grunge" target="metal">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="emo" target="hardcore">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="emo" target="indie">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="emo" target="indie-pop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="indie" target="indie-pop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="indie-pop" target="pop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="indie-pop" target="power-pop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="hardcore" target="heavy-metal">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="hardcore" target="metalcore">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="black-metal" target="heavy-metal">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="death-metal" target="metalcore">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="death-metal" target="heavy-metal">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="heavy-metal" target="grindcore">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="goth" target="industrial">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="power-pop" target="pop">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="pop" target="synth-pop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="pop" target="j-pop">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="pop" target="j-idol">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="pop" target="k-pop">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="pop" target="mandopop">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="pop" target="cantopop">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="pop" target="mpb">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="pop" target="pop-film">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="synth-pop" target="dance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="j-pop" target="anime">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="j-pop" target="k-pop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="j-pop" target="j-dance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="j-idol" target="anime">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="mandopop" target="cantopop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="mpb" target="brazil">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="pop-film" target="show-tunes">
+      <data key="d1">connect</data>
+    </edge>
+    <edge source="dancehall" target="reggae">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="dancehall" target="ska">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="dancehall" target="latin">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="dancehall" target="latino">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="dancehall" target="dance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="reggae" target="dub">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="reggae" target="ska">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="reggae" target="latin">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="reggae" target="latino">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="latin" target="salsa">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="drum-and-bass" target="breakbeat">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="drum-and-bass" target="techno">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="breakbeat" target="trip-hop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="breakbeat" target="hip-hop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="breakbeat" target="dubstep">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="breakbeat" target="idm">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="trip-hop" target="hip-hop">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="deep-house" target="house">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="deep-house" target="chicago-house">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="house" target="chicago-house">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="house" target="progressive-house">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="house" target="hardstyle">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="house" target="trance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="house" target="j-dance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="house" target="electro">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="chicago-house" target="detroit-techno">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="chicago-house" target="ambient">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="detroit-techno" target="techno">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="detroit-techno" target="edm">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="detroit-techno" target="trance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="detroit-techno" target="idm">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="detroit-techno" target="minimal-techno">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="detroit-techno" target="electro">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="techno" target="minimal-techno">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="techno" target="edm">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="techno" target="idm">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="techno" target="hardstyle">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="techno" target="j-dance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="techno" target="electro">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="techno" target="industrial">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="minimal-techno" target="edm">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="edm" target="electro">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="edm" target="electronic">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="edm" target="dubstep">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="edm" target="idm">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="edm" target="club">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="edm" target="hardstyle">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="edm" target="trance">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="edm" target="j-dance">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="edm" target="party">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="edm" target="dance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="club" target="party">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="hardstyle" target="trance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="trance" target="ambient">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="trance" target="j-dance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="j-dance" target="dance">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="chill" target="ambient">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="chill" target="study">
+      <data key="d1">connect</data>
+    </edge>
+    <edge source="ambient" target="study">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="piano" target="classical">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="classical" target="opera">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="classical" target="romance">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="pagode" target="brazil">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="pagode" target="samba">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="brazil" target="sertanejo">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="brazil" target="forro">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="brazil" target="world-music">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="forro" target="samba">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="forro" target="tango">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="forro" target="salsa">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="tango" target="world-music">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="tango" target="samba">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="tango" target="salsa">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="world-music" target="samba">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="world-music" target="salsa">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="samba" target="salsa">
+      <data key="d1">influence</data>
+    </edge>
+    <edge source="kids" target="children">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="children" target="disney">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="children" target="show-tunes">
+      <data key="d1">subgenre</data>
+    </edge>
+    <edge source="disney" target="show-tunes">
+      <data key="d1">connect</data>
+    </edge>
+    <edge source="dance" target="hip-hop">
+      <data key="d1">influence</data>
+    </edge>
+  </graph>
+</graphml>

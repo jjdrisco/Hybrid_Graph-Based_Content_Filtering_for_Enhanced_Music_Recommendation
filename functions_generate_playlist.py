@@ -454,6 +454,177 @@ def generate_basic_playlist(
     return playlist
 
 # %%
+
+def generate_genre_guided_playlist(
+    df: pd.DataFrame, 
+    model, 
+    music_graph,
+    #starting_genre: str = 'dance',
+    starting_song_index: Optional[int] = None, 
+    playlist_size: int = 20, 
+    diversity_penalty: float = 3,
+    feature_cols: Optional[List[str]] = None
+) -> List[Dict]:
+    """
+    Generate a playlist that follows a genre transition path from the music genre knowledge graph.
+    
+    Parameters:
+    -----------
+    df : pandas DataFrame
+        DataFrame containing encoded songs with features
+    model : object
+        Clustering model with predict() method
+    music_graph : networkx.Graph
+        Music genre knowledge graph
+    starting_genre : str
+        The genre to start the genre transition path from
+    starting_song_index : int, optional
+        Index of the starting song. If None, a random song within the starting genre is selected
+    playlist_size : int
+        Number of songs to include in the playlist
+    diversity_penalty : float
+        Controls how far genre transitions can go from the original genre
+    feature_cols : list, optional
+        Feature columns to use for prediction
+        
+    Returns:
+    --------
+    list
+        List of dictionaries containing song information for the playlist
+    """
+    from functions_genre_graph import get_transitions
+
+    # Prepare data
+    df, df_features = prepare_features_for_clustering(df, feature_cols)
+    
+    # Get cluster assignments for all songs
+    all_clusters = get_cluster_assignments(model, df_features)
+    df['cluster'] = all_clusters
+    unique_clusters = np.unique(all_clusters)
+    
+    # Identify which clusters contain songs of each genre
+    genre_to_clusters = {}
+    for genre in set(df['track_genre']):
+        genre_to_clusters[genre] = set(df[df['track_genre'] == genre]['cluster'].unique())
+    
+    # If starting_song_index is not provided, select starting song
+    starting_song_index = select_starting_song(df, starting_song_index)
+
+    # Generate genre transition path
+    starting_genre = df.loc[starting_song_index]['track_genre']
+    genre_transitions = get_transitions(music_graph, starting_genre, playlist_size, diversity_penalty)
+    print(f"Genre transition path: {genre_transitions}")
+    
+    # Get starting song features and determine its cluster
+    starting_features = df_features.loc[starting_song_index].values.reshape(1, -1)
+    current_cluster = model.predict(starting_features)[0]
+    
+    # Initialize playlist
+    playlist = [df.loc[starting_song_index].to_dict()]
+    selected_indices = {starting_song_index}
+    
+    # Generate the rest of the playlist based on genre transitions
+    for i in range(1, len(genre_transitions)):
+        target_genre = genre_transitions[i]
+        
+        # Strategy 1: First try current cluster with target genre
+        target_genre_songs = df[
+            (df['track_genre'] == target_genre) & 
+            (df['cluster'] == current_cluster) &
+            (~df.index.isin(selected_indices))
+        ]
+        
+        # Strategy 2: If no match, find the nearest clusters that contain the target genre
+        if target_genre_songs.empty:
+            found_song = False
+            
+            # Find which clusters contain songs of target genre
+            if target_genre in genre_to_clusters and genre_to_clusters[target_genre]:
+                # Get centroids of all clusters
+                centroids = model.cluster_centers_
+                # Calculate distances from current cluster to all clusters
+                current_centroid = centroids[current_cluster]
+                distances_to_clusters = {}
+                
+                # Calculate distance to each cluster that contains the target genre
+                for cluster_id in genre_to_clusters[target_genre]:
+                    distance = np.linalg.norm(current_centroid - centroids[cluster_id])
+                    distances_to_clusters[cluster_id] = distance
+                
+                # Sort clusters by proximity to current cluster
+                nearest_clusters = sorted(distances_to_clusters.items(), key=lambda x: x[1])
+                
+                # Try each cluster in order of proximity
+                for nearest_cluster_id, _ in nearest_clusters:
+                    cluster_genre_songs = df[
+                        (df['track_genre'] == target_genre) & 
+                        (df['cluster'] == nearest_cluster_id) &
+                        (~df.index.isin(selected_indices))
+                    ]
+                    
+                    if not cluster_genre_songs.empty:
+                        # Select a random song from the nearest cluster with target genre
+                        next_song_index = np.random.choice(cluster_genre_songs.index)
+                        found_song = True
+                        break
+            
+            # Strategy 3: If still no match, look for any song with target genre
+            if not found_song:
+                any_genre_songs = df[
+                    (df['track_genre'] == target_genre) & 
+                    (~df.index.isin(selected_indices))
+                ]
+                
+                if not any_genre_songs.empty:
+                    # Select a random song with target genre from any cluster
+                    next_song_index = np.random.choice(any_genre_songs.index)
+                    found_song = True
+                
+                # Strategy 4: If still no match, use current cluster
+                if not found_song:
+                    print(f"No songs found for genre '{target_genre}', using current cluster.")
+                    # Get available songs in the current cluster
+                    available_songs = get_available_songs(
+                        df, all_clusters, current_cluster, selected_indices
+                    )
+                    
+                    # If no songs available in that cluster, find another with available songs
+                    if not available_songs:
+                        # Find a new cluster with available songs
+                        for cluster_id in sorted(unique_clusters, key=lambda c: np.linalg.norm(centroids[current_cluster] - centroids[c])):
+                            available_songs = get_available_songs(
+                                df, all_clusters, cluster_id, selected_indices
+                            )
+                            if available_songs:
+                                next_song_index = np.random.choice(available_songs)
+                                found_song = True
+                                break
+                        
+                        # If we've exhausted all clusters, we've used all songs
+                        if not found_song:
+                            print("No more songs available, ending playlist generation.")
+                            break
+                    else:
+                        next_song_index = np.random.choice(available_songs)
+        else:
+            # Select a random song from available target genre songs in current cluster
+            next_song_index = np.random.choice(target_genre_songs.index)
+        
+        # Add song to playlist
+        playlist.append(df.loc[next_song_index].to_dict())
+        selected_indices.add(next_song_index)
+        
+        # Update current cluster for the next iteration
+        next_features = df_features.loc[next_song_index].values.reshape(1, -1)
+        current_cluster = model.predict(next_features)[0]
+        
+        # If we've reached the desired playlist size, break
+        if len(playlist) >= playlist_size:
+            break
+    
+    return playlist
+
+# %%
 def save_playlist_to_csv(playlist: List[Dict], filepath: str) -> None:
     """
     Save the generated playlist to a CSV file with only human-readable features.
