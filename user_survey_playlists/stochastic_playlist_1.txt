@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Gusttavo Lima,Do Outro Lado da Moeda,Ponto G,sertanejo
+Krystina Alabado,The Mad Ones (Studio Cast Recording),Yellow SUV,show-tunes
+Eric Carmen,The Definitive Collection,"Hungry Eyes - From ""Dirty Dancing"" Soundtrack",singer-songwriter
+Tito Nieves,Clase Aparte,Le Gusta Que La Vean,salsa
+"Katinguelê;Transcontinental FM 104,7",Impossível Te Esquecer (Acústico da Trans),Impossível Te Esquecer (Acústico da Trans),samba
+Chess In Concert,Chess In Concert,1956 - Budapest Is Rising,show-tunes
+Jax,Top Off Snap Hits,Victoria's Secret,singer-songwriter
+Carolee Carmello;Matthew Morrison;Aidan Gemme;Christopher Paul Richards;Sawyer Nunes;Alex Dreier,Finding Neverland (Original Broadway Cast Recording),Finale - Original Broadway Cast Recording,show-tunes
+Atitude 67,Atitude 67 (Ao Vivo),Dia X - Ao Vivo,sertanejo
+Santanu Sahu;SITAL SAHU;Prakash Kumbhar;Jogesh Jojo,Lal Lal Lipstick,Lal Lal Lipstick,samba
+Zeca Pagodinho,Zeca Pagodinho - Uma Prova De Amor Ao Vivo (Deluxe),Uma Prova De Amor - Ao Vivo,samba
+Raghav Chaitanya,Lamhe,Lamhe,singer-songwriter
+Matheus & Kauan,Tem Moda Acústica (Acústico),Quarta Cadeira - Acústico,sertanejo
+Vou pro Sereno;Xande De Pilares,A Força do Nosso Som (Ao Vivo),Tá Escrito (feat. Xande de Pilares) - Ao Vivo,samba
+James Taylor,Christmas Country Songs 2022,Santa Claus Is Coming To Town,singer-songwriter
+Jan Ammann,Rebecca - Gesamtaufnahme Live,"Gott, warum?",show-tunes

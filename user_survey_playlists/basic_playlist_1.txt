@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Gusttavo Lima,Do Outro Lado da Moeda,Ponto G,sertanejo
+Henrique & Juliano,Manifesto Musical (Ao Vivo),Seu Perfil - Ao Vivo,sertanejo
+Akatu,#Vamo Cantar (Ao Vivo),O Amor Não Tem Culpa / Eu Nunca Amei Assim - Ao Vivo,samba
+Reinaldo,Samba Meu Brasil,Retrato cantado de um amor,samba
+João Bosco & Vinicius,Indescritível (Live),Eu Vou Morrer De Amor,sertanejo
+Nico;uChill,Slowed + Reverbed 2022,These Days - Slowed + Reverb,singer-songwriter
+Víctor Manuelle,Sólo para Mujeres,En Nombre de los Dos,salsa
+Okieriete Onaodowan;Daveed Diggs;Lin-Manuel Miranda;Leslie Odom Jr.;Anthony Ramos,Hamilton (Original Broadway Cast Recording),The Story of Tonight - Reprise,show-tunes
+Clayton & Romário,No Churrasco 2 (Ao Vivo / Vol. 2),Talismã / 24 Horas De Amor - Ao Vivo,sertanejo
+Osho Jain;Sanchi,Saar,Kaun Apna,singer-songwriter
+Mindi Dickstein;Jason Howland;'Little Women' Original Broadway Cast,Little Women - The Musical (Original Broadway Cast Recording),An Operatic Tragedy,show-tunes
+Jorge & Mateus,Jorge & Mateus Ao Vivo Em Goiânia (Ao Vivo Em Goiânia / 2007),Goiânia Me Espera - Ao Vivo Em Goiânia / 2007,sertanejo
+Jubiläumscast Wien 2012,Elisabeth - Gesamtaufnahme Live - Jubiläumsfassung,So wie man denkt,show-tunes
+Zeca Pagodinho,Zeca Pagodinho - Uma Prova De Amor Ao Vivo (Deluxe),Uma Prova De Amor - Ao Vivo,samba
+Carin Filipcic,Rebecca - Cast Album,I´m An American Woman,show-tunes
+Akatu,Akatu Relax,Deixa Tudo Como Tá / Melhor Eu Ir,samba

@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Höhner,Wenn et Hätz dich röf,Wenn et Hätz dich röf,party
+Ferrugem,Ferrugem em Casa 2 (Bloco 1) [Ao Vivo],Será que é amor / Agora viu que me perdeu e chora / Trilha do amor - Ao Vivo,pagode
+Laura Sullivan,Studio Ghibli Felt Piano and Fantasy Collection,"The Name of Life - Felt Piano Version (From ""Spirited Away"")",piano
+Mr. Dan;Analaga;Péricles,Experi Black,Copacabana (Bum Bum Pro Alto),pagode
+Paveier,Karneval der Stars 51,Hau op die Trumm,party
+Anstandslos & Durchgeknallt;JONA;Jerome,Wenn die Welt untergeht (Jerome Remix),Wenn die Welt untergeht - Jerome Remix,party
+Yiruma,The Best - Reminiscent 10th Anniversary,May Be,piano
+Markus Becker;Oliver DeVille,Ballermann Hits 2022,Micky Maus - Wir geh'n noch nicht nach Haus - Villa-Mix,party
+Michelle,Ballermann Hits Party 2023,Scheißkerl,party
+Mickie Krause,Karneval Klassiker,"Biste braun, kriegste Fraun - Version 2015",party
+Toque De Prima,"Daqui, Dali, de Lá","Cabô, Meu Pai",pagode
+Vou pro Sereno,A Força do Nosso Som (Ao Vivo),Nada pra Fazer / Nascente da Paz - Ao Vivo,pagode
+Kate Bush,OK Boomers - Top Tunes,Wuthering Heights,piano
+Grupo Revelação,Ao Vivo No Olimpo,Zé Meningite,pagode
+Luciano Pavarotti,"Luciano Pavarotti, Vol. 2",Nessun Dorma,opera
+Fäaschtbänkler,Flamingo + Hoch die Hände Wochenende,Konfetti,party

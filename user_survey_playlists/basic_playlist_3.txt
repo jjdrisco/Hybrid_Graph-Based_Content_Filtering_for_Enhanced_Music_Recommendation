@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Boney M.,Nightflight to Venus,Rivers of Babylon,disco
+Seth Troxler,Just Back,Junkyard Tool - Original Mix,detroit-techno
+Mr. Vegas,Reggae Mix USA [Mixed By Jabba],Heads High,dancehall
+Derrick May,Innovator (Mayday),Some More Spaced Out,detroit-techno
+Rick James,80s Bangers Vol. 1,Super Freak,disco
+Extazy,Chciałem być,Noc taka czarna,disco
+The Black Dahlia Murder,Abysmal,Stygiophobic,death-metal
+HUGEL;Westend;Cumbiafrica,Aguila ft. Cumbiafrica,Aguila ft. Cumbiafrica,deep-house
+Transmetal,Velóz y Devastador,Muerto en la Cruz,death-metal
+Surgeon,"Carry On, Pretend We're Not In The Room",Floorshow - 1.2,detroit-techno
+Alfred Heinrichs;Haexxa,IAM ALFRED HEINRICHS feat. Haexxa,Illusion feat. Haexxa,deep-house
+Rose Royce,On air 70's Hits,Car Wash - Long Version,disco
+Goretrade,Mistaken Conception (Special Edition 2cd),Rejecting the Lies,death-metal
+Batu Onat,Prisoners of Love,Prisoners of Love,deep-house
+Theo Parrish,American Intelligence,Fallen Funk,detroit-techno
+Omar S;Diviniti,Here with Me.,Here with Me,detroit-techno

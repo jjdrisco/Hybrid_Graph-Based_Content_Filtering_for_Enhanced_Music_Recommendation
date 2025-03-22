@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Boney M.,Nightflight to Venus,Rivers of Babylon,disco
+James Hype;HARLEE,Afraid,Afraid (feat. HARLEE),deep-house
+Robert Hood,Technatural EP,Teflon,detroit-techno
+Miss May I,Shadows Inside,Crawl,death-metal
+Ilkay Sencan,Clap,Clap,deep-house
+Christopher Martin,Paper Loving,Paper Loving,dancehall
+Omah Lay,Boy Alone,bend you,dancehall
+ONYVAA,Lost Angeles EP,Lucid,detroit-techno
+The Avener;Phoebe Killdeer,Autumn Vibes 2022,Fade Out Lines - The Avener Rework,deep-house
+Opeth,Nordic Metal,The Devil's Orchard,death-metal
+James Hype;Pia Mia;PS1,Good Luck (PS1 Remix),Good Luck (feat. Pia Mia) - PS1 Remix,deep-house
+Navos;Galantis;YOU,What It Feels Like,What It Feels Like,deep-house
+Entombed,Left Hand Path,Left Hand Path,death-metal
+Transmetal,Velóz y Devastador,Enviado del Infierno,death-metal
+Slayer,Seasons In The Abyss,War Ensemble,death-metal
+Drexciya,Journey of the Deep Sea Dweller II,Bang-Bang,detroit-techno

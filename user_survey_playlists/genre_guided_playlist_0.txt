@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Reznyck,Muscle Cardiac,Maseratiphoïde,club
+DJ Ötzi;Xtreme Sound,Ballermann Hits Party 2023,Wenn Gott so will - Xtreme Sound Remix,party
+NIVIRO,The Ghost,The Ghost,edm
+Haezer,Exit,Dumb,club
+ILLENIUM;Teddy Swims,Worst Day,All That Really Matters,edm
+Querox;Phaxe,Tripical Moon,Tripical Moon,trance
+Noisecontrollers;Bass Modulators,Electric Solar,Electric Solar,hardstyle
+Hyperflow,Namah Shiva,Namah Shiva,trance
+Omar S,It Can Be Done but Only I Can Do It,Ganymede,detroit-techno
+Tiësto;Hardwell;Matthew Koma,A Town Called Paradise,Written In Reverse,trance
+Matoma;Brando,Today's Party Hits,The Bender,house
+Technoboy;Shayla,Oh My God,Oh My God - Technoboy Dib Dub,hardstyle
+David Guetta;Bebe Rexha;REAPER,I'm Good (Blue) [REAPER Remix],I'm Good (Blue) - REAPER Extended Remix,edm
+Robert Hood,Mirror Man,A System Of Mirrors,detroit-techno
+Major Lazer;Nyla;Fuse ODG,Peace Is The Mission (Extended),Light It Up - Remix,edm
+TOKYO ROSE;ZABO;Aloma Steele,Last Goodbye,Last Goodbye,club

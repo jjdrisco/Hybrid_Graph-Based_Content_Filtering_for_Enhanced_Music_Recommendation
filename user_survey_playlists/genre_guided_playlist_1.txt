@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Gusttavo Lima,Do Outro Lado da Moeda,Ponto G,sertanejo
+Lobão,"Lobão Elétrico Lino, Sexy & Brutal - Ao Vivo Em São Paulo (Deluxe Version)",Me Chama (Deluxe Version),brazil
+Tierry;Wesley Safadão,Rolê De Milhões,Diabinha - Ao Vivo,sertanejo
+Zarastruta;Jean Tassy;Patricio Sid;Don,Nômade VII,Nômade VII,brazil
+Paulo Ricardo,O Amor Me Escolheu,Tudo Por Nada,mpb
+Adriana Arydes,Adriana Arydes (Ao Vivo),Halellujah - Ao Vivo,brazil
+Henrique & Diego,"Henrique & Diego ""Ao Vivo em Campo Grande""",Oh Delícia - Ao Vivo,sertanejo
+Gabriela Rocha,Leão (Ao Vivo),Leão - Ao Vivo,brazil
+Matogrosso & Mathias,Zona Rural (Ao Vivo),Boate Azul - Ao Vivo,sertanejo
+Raimundos;Érica Martins,Só as Melhores do Pop Rock Brasileiro,A mais pedida,brazil
+Lauana Prado,Raiz (Ao Vivo),É Nisso Que Dá / Sem Me Controlar / Mala Pronta - Ao Vivo,sertanejo
+Racionais MC's;DJ Cia,Cores & Valores,Preto Zica,brazil
+Nosso Sentimento,É Tão Lindo,Sonho de Amor - Ao Vivo,pagode
+Detonautas Roque Clube,Detonautas Acústico,Quando o sol se for,brazil
+Dj Chris No Beat;Rafael Frare,Dona (Ao Vivo),Dona - Ao Vivo,sertanejo
+Nívea Soares;Isaias Saad,Só Existe Um Lugar (Ao Vivo),Só Existe Um Lugar - Ao Vivo,brazil

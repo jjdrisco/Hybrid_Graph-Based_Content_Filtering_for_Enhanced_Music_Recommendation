@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Reznyck,Muscle Cardiac,Maseratiphoïde,club
+Eartheater,Phoenix: Flames Are Dew Upon My Skin,How To Fight,club
+Darius Rucker,True Believers,Wagon Wheel,country
+Brett Eldredge,Chillin' It - Mellow Day Country,Bring You Back,country
+Gabby Barrett,Finest Country,Footprints on the Moon,country
+Selena Gomez,Concierto en la ducha,Back To You - From 13 Reasons Why – Season 2 Soundtrack,dance
+Wolfgang Amadeus Mozart;Arthur Grumiaux;Walter Klien,Mozart - A Classical Dawn,"Sonata for Piano and Violin in F, K.377: 2a. Tema con variazioni: Tema",classical
+Riley Green,We Out Here: Live,Hell Of A Way To Go - Live,country
+Franz Liszt;Nelson Freire,Relajación y siestas,"Années de pèlerinage: 1e année: Suisse, S.160: 2. Au lac de Wallenstadt",classical
+Doja Cat,New Pop Icons,Boss Bitch,dance
+Shamanes Crew,Tótem,Hasta La Mañana,dancehall
+fenekot,Habits (Stay High),Habits (Stay High),chill
+Avicii,10's Music Grandi Successi,The Nights,dance
+Hotcaller;Nexy,Damn,Damn,club
+Lady Gaga,Beginner Ride (Sweat & Burn),Born This Way,dance
+Don Williams,Visions,Some Broken Hearts Never Mend,country

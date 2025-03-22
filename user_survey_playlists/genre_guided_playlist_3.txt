@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Boney M.,Nightflight to Venus,Rivers of Babylon,disco
+Pet Shop Boys,Discography - Complete Singles Collection,It's a Sin,synth-pop
+Almklausi;Specktakel,Après Ski Megahits 2023,Mama Laudaaa - Apres Ski Edition,disco
+The Supremes,A Very 60s Christmas,Little Bright Star - Stereo,soul
+UM44K,UM44K Acústico,Não dá mais - Acústico,r-n-b
+Adele,30,Oh My God,soul
+Hugh Masekela,Still Grazing,Been Such A Long Time Gone,afrobeat
+Snoop Dogg;Wiz Khalifa;Bruno Mars,Smash Hits 2012!,"Young, Wild & Free",funk
+Olivia Dean,pov: it's 2020,The Hardest Part,soul
+Sabotage;Sombra;Bastardo,Rap É Compromisso (Edição Comemorativa),Cocaína,r-n-b
+Mc Don Juan;Luíza & Maurílio,Saudade do Ex,Saudade do Ex,funk
+Lulu Santos,O Último Romântico,Adivinha o quê,r-n-b
+Adele,21,Don't You Remember,soul
+Ricardo Lemvo,Shall We Salsa,Africa Havana Paris,afrobeat
+Anitta;Missy Elliott,Hip Hop & R'n'B,Lobby,funk
+Stevie Wonder,Coffee Break,Saturn,soul

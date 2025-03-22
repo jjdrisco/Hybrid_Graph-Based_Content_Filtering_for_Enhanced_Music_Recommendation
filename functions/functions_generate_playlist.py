@@ -47,7 +47,7 @@ def prepare_features_for_clustering(
 # %%
 def select_starting_song(
     df: pd.DataFrame, 
-    starting_song_index: Optional[int] = None
+    starting_song_index: Optional[int] = None,
 ) -> int:
     """
     Select a starting song index, either from input or randomly.
@@ -162,9 +162,30 @@ def select_next_cluster(
     # # When exploring, sample from clusters based on distance
     # if hasattr(model, 'cluster_centers_'):
     # Get transition probabilities
-    probs = compute_cluster_transition_probabilities(
+    all_probs = compute_cluster_transition_probabilities(
         model, current_cluster, temperature
     )
+
+    # Extract probabilities only for unique clusters we're considering
+    # This is the critical fix - ensuring probs matches unique_clusters
+    probs = np.zeros(len(unique_clusters))
+    for i, cluster_id in enumerate(unique_clusters):
+        # Make sure cluster_id is within range of all_probs
+        if cluster_id < len(all_probs):
+            probs[i] = all_probs[cluster_id]
+
+    # Normalize to ensure probabilities sum to 1
+    if np.sum(probs) > 0:
+        probs = probs / np.sum(probs)
+    else:
+        # Fallback to uniform distribution if all probs are zero
+        probs = np.ones(len(unique_clusters)) / len(unique_clusters)
+
+    # Check for NaN values which would cause another error
+    if np.any(np.isnan(probs)):
+        # Replace NaNs with uniform distribution
+        probs = np.ones(len(unique_clusters)) / len(unique_clusters)
+
     #print(probs)
     # Sample a cluster based on proximity
     return np.random.choice(unique_clusters, p=probs)
@@ -492,7 +513,7 @@ def generate_genre_guided_playlist(
     list
         List of dictionaries containing song information for the playlist
     """
-    from functions_genre_graph import get_transitions
+    from functions.functions_genre_graph import get_transitions
 
     # Prepare data
     df, df_features = prepare_features_for_clustering(df, feature_cols)

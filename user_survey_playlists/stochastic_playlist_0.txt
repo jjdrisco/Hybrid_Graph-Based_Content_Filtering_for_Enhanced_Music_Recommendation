@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Reznyck,Muscle Cardiac,Maseratiphoïde,club
+Vince Gill;Jenny Gill,Lonely Christmas 2022,Let There Be Peace On Earth,country
+ODESZA;Bettye LaVette,The Last Goodbye (feat. Bettye LaVette),The Last Goodbye (feat. Bettye LaVette),chill
+Wolfgang Amadeus Mozart;Heinz Holliger;Hermann Baumann;Michel Gasciarrino;Henk Guldemond;Orlando Quartet,Mozart: A Night of Classics,"Divertimento No. 11 in D, K.251 ""Nannerl-Septett"": 4c. Menuetto (Tema con variazioni): Var. II",classical
+Sean Paul;Tory Lanez,Mad Love The Prequel,Tek Weh Yuh Heart,dancehall
+untrusted;creamy;11:11 Music Group,sweater weather / i wanna be your girlfriend,sweater weather / i wanna be your girlfriend,chill
+Alesso;Marshmello;James Bay,pov: it's 2021,Chasing Stars,dance
+Charlie Puth,Feeling Good,Light Switch,dance
+Kraff Gad;9Mill,N.P.T,N.P.T,dancehall
+Morgan Evans,New Country Hits,Country Outta My Girl,country
+Spice,Emancipated,TAPE MEASURE,dancehall
+Canned Heat,(60's) Sixties Collected Volume 2,Goin' Up The Country,country
+Blackhaine,Prayer,Stained Materials - Edit,club
+Yxng Bane,African Heat - Afro Hits,Needed Time,dancehall
+Kacey Musgraves,pov: you have a holly jolly christmas,Feliz Navidad,country
+Midland,Tailgate Country,East Bound And Down,country

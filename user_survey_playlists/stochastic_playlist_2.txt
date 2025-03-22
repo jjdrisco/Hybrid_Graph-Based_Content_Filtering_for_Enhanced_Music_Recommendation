@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Höhner,Wenn et Hätz dich röf,Wenn et Hätz dich röf,party
+George Winston,Linus & Lucy - The Music of Vince Guaraldi,Peppermint Patty,new-age
+Alfredo Kraus;Symphony Orchestra of Madrid;Kurt Sanderling,Classical Choice: Great Opera,"Carmen, Act II: ""La fleur que tu m'avais jetée"" (Don Jose)",opera
+Ina Colada,Après Ski Fussball Party 2022 - Wir feiern auf den Hütten,Wer nicht springt der muss bezahlen,party
+Turma do Pagode;Netinho De Paula,Misturadin (Ao Vivo),Beijo Geladinho / Cohab City (feat. Netinho De Paula) - Ao Vivo,pagode
+Jorge Aragão,Ao vivo 3,"Na rua, na chuva, na fazenda (Casinha de sapê) - Ao vivo",pagode
+Matthias Reim,Meteor,Ich geb uns nicht auf,party
+Yao Chen,Purity,Purity,piano
+Buddy,Cover Clown,Tausendmal berührt,party
+Sabbotage,Hömma Samma Womma Nomma (Bier Trinken Gehen),Hömma Samma Womma Nomma (Bier trinken gehen),party
+Michael Wendler,The Very Best Of,180 Grad - 2006,party
+Il Volo,Il Volo...Takes Flight (Live From The Detroit Opera House),Notte Stellata (The Swan) - Live From The Detroit Opera House,opera
+Bernward Koch,Day of Life,The Enchanted Path,new-age
+Jim Brickman,Faith (Deluxe Edition),Morning Has Broken,new-age
+Giuseppe Verdi;Riccardo Muti;Montserrat Caballé;New Philharmonia Orchestra,Verdi: Aida,"Verdi: Aida, Act 1: ""Ritorna vincitor!"" (Aida)",opera
+Elton John;Britney Spears,Hold Me Closer (Joel Corry Remix),Hold Me Closer,piano

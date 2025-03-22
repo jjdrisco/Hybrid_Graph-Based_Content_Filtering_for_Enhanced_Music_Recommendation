@@ -1,0 +1,17 @@
+artists,album_name,track_name,track_genre
+Höhner,Wenn et Hätz dich röf,Wenn et Hätz dich röf,party
+SWARM,The End of All Things,The End of All Things,club
+DJ Düse,Voll wie Düse / Das was bleibt / Für immer und ewig (Hitmix),Voll wie Düse / Das was bleibt / Für immer und ewig - Hitmix,party
+Donbor,Bloq Num 11,D411,club
+Peter Wackel,Ballermann Einhorn - Mallorca Schlager Hits 2017 für deine Party,Ladioo - Arena-Hitmix,party
+SIERRA;Z6b3r,Strange Valley (The Remixes),Hide - Z6B3R Remix,club
+Buddy;Pazoo,Karneval 2022 100%,Wir haben Grund zum Feiern!,party
+SWARM;I-Exist,In My Dreams,In My Dreams,club
+Norman Langen,Bis zum letzten Atemzug,Bis zum letzten Atemzug,party
+Linn da Quebrada,Pajubá,Tomara,club
+Topic;Robin Schulz;Nico Santos;Paul van Dyk,Arbeitsmusik Herbst/Winter 2022/2023,In Your Arms (For An Angel),edm
+Susumu Yokota,Grinning Cat,King Dragonfly,idm
+Agoria;Blasé,3 Letters,3 Letters,techno
+ONYVAA,Passeport006,006 B2,detroit-techno
+The Chainsmokers,Memories...Do Not Open,The One,edm
+The Chainsmokers;Winona Oak,Sick Boy,Hope,electro
